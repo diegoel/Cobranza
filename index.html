@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobranza</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="contenedorMobile">
+    <h1>Mensajes predeterminados de cobranza</h1>
+    <select class="tipo" id="tipo">
+      <option value="titular">TITULAR</option>
+      <option value="referencia">REFERENCIA</option>
+    </select>
+    <form action="" id="formulario">
+      <div>
+        <input id="nombre" type="text" placeholder="NOMBRE" required>
+      </div>
+      <div>
+        <input id="clienteunico" class="inactive" type="text" placeholder="C.U.">
+      </div>
+      <div>
+        <input id="saldo" class="inactive" type="text" placeholder="SALDO">
+      </div>
+      <div>
+        <select name="opcionesTitular"  class="inactive" id="opcionesTitular">
+          <option value="credimax">CREDIMAX</option>
+          <option value="tor">TOR</option>
+        </select>
+      </div>
+      <input type="button" value="Generar" id="generar">
+    </form>
+    <div class="contenedorMensaje">
+      <p id="mensaje"></p>
+    </div>
+    <button id="boton" onclick="copiarAlPortapapeles()" class="inactive">Copiar</button>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
