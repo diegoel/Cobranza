@@ -8,8 +8,10 @@ body {
 }
 
 .contenedorMobile {
-  width: 360px;
-  height: 640px;
+  max-width: 451px  ;
+  width: 100%;
+  min-width: 320px;
+  height: 3760px;
   background-color: darkgrey;
   text-align: center;
   overflow-y: scroll;
