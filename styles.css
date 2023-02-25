@@ -7,15 +7,16 @@ body {
   display: none;
 }
 
-.contenedorMobile {
-  max-width: 451px  ;
-  width: 100%;
-  min-width: 320px;
-  height: 3760px;
-  background-color: darkgrey;
-  text-align: center;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+@media (max-width: 640px) {
+  .contenedorMobile {
+    width: 100%;
+    min-width: 320px;
+    height: 3760px;
+    background-color: darkgrey;
+    text-align: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
 }
 select{
   width: 177px;
