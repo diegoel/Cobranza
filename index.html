@@ -8,35 +8,29 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="contenedorMobile">
-    <h1>Mensajes predeterminados de cobranza</h1>
-    <select class="tipo" id="tipo">
-      <option value="titular">TITULAR</option>
-      <option value="referencia">REFERENCIA</option>
-    </select>
-    <form action="" id="formulario">
-      <div>
-        <input id="nombre" type="text" placeholder="NOMBRE" required>
-      </div>
-      <div>
+  <main>
+    <div class="contenedorMobile">
+      <img src="./resources/logo_Banco_Azteca.png.crdownload" alt="Banco Azteca">
+      <form action="" id="formulario">
+        <select class="campos" id="tipo">
+          <option value="titular">TITULAR</option>
+          <option value="referencia">REFERENCIA</option>
+        </select>
+        <input id="nombre" type="text" placeholder="NOMBRE">
         <input id="clienteunico" class="inactive" type="text" placeholder="C.U.">
-      </div>
-      <div>
         <input id="saldo" class="inactive" type="text" placeholder="SALDO">
-      </div>
-      <div>
         <select name="opcionesTitular"  class="inactive" id="opcionesTitular">
           <option value="credimax">CREDIMAX</option>
           <option value="tor">TOR</option>
         </select>
+        <input type="button" value="GENERAR" id="generar">
+      </form>
+      <div class="contenedorMensaje">
+        <p id="mensaje"></p>
       </div>
-      <input type="button" value="Generar" id="generar">
-    </form>
-    <div class="contenedorMensaje">
-      <p id="mensaje"></p>
+      <button id="boton" onclick="copiarAlPortapapeles()" class="inactive">Copiar</button>
     </div>
-    <button id="boton" onclick="copiarAlPortapapeles()" class="inactive">Copiar</button>
-  </div>
+  </main>
   <script src="./main.js"></script>
 </body>
 </html>

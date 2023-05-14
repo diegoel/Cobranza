@@ -7,30 +7,65 @@ body {
   display: none;
 }
 
-.contenedorMobile {
+main {
+  position: relative;
   width: 100%;
-  min-width: 320px;
-  height: 3760px;
-  background-color: darkgrey;
+  height: 100vh;
+  background-color: rgba(98, 89, 89, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorMobile {
+  width: 360px;
+  height: 450px;
+  overflow: auto;
+  border-radius: 30px;
   text-align: center;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  background-color: rgb(255,255,255);
+  text-align: center;
+}
+
+img {
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+form{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 select{
   width: 177px;
   height: 21px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
-.titular div {
-  margin-top: 10px;
+
+input {
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
+
 
 #generar {
   margin-top: 20px;
 }
 
 .contenedorMensaje{
+  position: relative;
   width: 300px;
+  height: auto;
   margin: 25px auto;
   
 }
