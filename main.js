@@ -8,6 +8,26 @@ var parrafo = document.getElementById("mensaje");
 var boton = document.getElementById("generar");
 var botonCopiar = document.getElementById("boton");
 
+//Mensajes
+
+// Referencias
+function refe(name){
+    var mensaje;
+    return mensaje = 'Hola buenos días! \n \nNuestro cliente: ' + name +', le ha puesto a usted como REFERENCIA, el día de hoy realizamos una visita domiciliaria para tratar un asunto relacionado con su crédito pero no pudimos contactarlo, nos gustaría que pudiera apoyarnos haciéndole llegar el mensaje de que estamos tratando de localizarlo de parte de Banco Azteca y si se puede comunicar a este número o acudir a una de las sucursales para atender el pendiente en su línea de crédito. De ante mano agradecemos su atención y su apoyo, que tenga usted excelente día!.';
+}
+
+// Credimax
+function credito(name, cliente, saldo){
+  var mensaje;
+  return mensaje = 'Departamento de Crédito \ny Cobranza de Banco  Azteca: \n \n Cliente: ' + name + '\n No. Cte.: ' + cliente + '\nSaldo: $' + saldo + '\n\nDebido a que usted está \nincumpliendo en sus pagos de \naucerdo a los términos delcontrato, \nnos vemos en la necesidad de \nrequerir su pago INMEDIATO, con \nel fin de no recurrir a la cláusula \n de vencimiento anticipado la cual \nimplicaría la liquidación del adeudo \nen una sola exhibición. \n\n Si su falta de pago persiste \n en los proximos días, pone en \nriesgo su crédito, su historial y \nsu buena reputación en Buró de \nCrédito Nacional, es por eso que le \n solicitamos que acuda a sucursal \ny liquide el atraso de su cuenta \npara que pueda continuar con los \nbeneficios de su crédito.';
+}
+
+// Oro
+function oro(name, cliente, saldo){
+  var mensaje;
+  return mensaje = 'Departamento de Crédito \ny Cobranza de Banco  Azteca: \n \n Cliente: ' + name + '\n No. Cte.: ' + cliente + '\nSaldo: $' + saldo + '\n\nEstimado cliente le invitamos para que \npase a sucrusal a realizar el pago de su \n TARJETA ORO. \n\nEl crédito de la TARJETA ORO es revolvente, \nsi pagas tendrás más crédito disponible! \n\nRecuerda que la fecha de corte son los \ndías 5 y la fecha límite de pago son los \ndías 25 de cada mes.';
+}
+
 function estadoInputs(){
   if (tipo.value == 'titular'){
     clienteunico.classList.remove('inactive');
@@ -28,7 +48,7 @@ function mensaje (){
     return;
   } else{
     if(tipo.value == 'referencia'){
-      parrafo.innerText = 'Banco Azteca \n \n Le pedimos de la manera más \n atenta le informe al cliente: \n ' + nombre.value + '\n que es de nuestro especial interés \ncontactarle, por lo que le pedimos \nporfavor atienda nuestra petición \ny se comunique o acuda a una de \nnuestras sucursales. \nDe ante mano agardecemos su \napoyo y esperamos tenga excelente \ndía. \nTel: 2291298074';
+      parrafo.innerText = refe(nombre.value);
     }else{
 
       if (clienteunico.value.trim() === '') {
@@ -41,9 +61,9 @@ function mensaje (){
         return;
       } else{
         if (opcionesTitular.value == "credimax"){
-          parrafo.innerText = 'Departamento de Crédito \ny Cobranza de Banco  Azteca: \n \n Cliente: ' + nombre.value + '\n No. Cte.: ' + clienteunico.value + '\nSaldo: $' + saldo.value + '\n\nDebido a que usted está \nincumpliendo en sus pagos de \naucerdo a los términos delcontrato, \nnos vemos en la necesidad de \nrequerir su pago INMEDIATO, con \nel fin de no recurrir a la cláusula \n de vencimiento anticipado la cual \nimplicaría la liquidación del adeudo \nen una sola exhibición. \n\n Si su falta de pago persiste \n en los proximos días, pone en \nriesgo su crédito, su historial y \nsu buena reputación en Buró de \nCrédito Nacional, es por eso que le \n solicitamos que acuda a sucursal \ny liquide el atraso de su cuenta \npara que pueda continuar con los \nbeneficios de su crédito.';
+          parrafo.innerText = credito(nombre.value, clienteunico.value, saldo.value);
         }else{
-          parrafo.innerText = 'Departamento de Crédito \ny Cobranza de Banco  Azteca: \n \n Cliente: ' + nombre.value + '\n No. Cte.: ' + clienteunico.value + '\nSaldo: $' + saldo.value + '\n\nEstimado cliente le invitamos para que \npase a sucrusal a realizar el pago de su \ncrédito de la TARJETA ORO. \n\nTu crédito de la TARJETA ORO es revolvente, \nsi pagas tendrás más crédito disponible! \n\nRecuerda que la fecha de corte son los \ndías 5 y la fecha límite de pago son los \ndías 25 de cada mes.'
+          parrafo.innerText = oro(nombre.value, clienteunico.value, saldo.value);
         }
       }
     }
